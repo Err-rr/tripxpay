@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
       quote:
         "The rewards program is incredible. I've earned enough points from my travels to cover a weekend getaway trip!",
       name: "Morgan Johnson",
-      title: "Travel blogger",
+      title: "Travel Blogger",
       avatarColor: "bg-yellow-500",
     },
   ]
@@ -41,6 +41,7 @@ const TestimonialsSection = () => {
               name={testimonial.name}
               title={testimonial.title}
               avatarColor={testimonial.avatarColor}
+              index={index} // ✅ Pass index for staggered animation
             />
           ))}
         </div>

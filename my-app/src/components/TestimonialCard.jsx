@@ -1,15 +1,16 @@
-import { motion, useAnimation } from "framer-motion"
+import { motion, useAnimation, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
-import { useInView } from "framer-motion"
 
-const TestimonialCard = ({ quote, name, title, avatarColor }) => {
+const TestimonialCard = ({ quote, name, title, avatarColor, index }) => {
   const controls = useAnimation()
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, threshold: 0.2 })
+  const inView = useInView(ref, { threshold: 0.2 })
 
   useEffect(() => {
     if (inView) {
       controls.start("visible")
+    } else {
+      controls.start("hidden")
     }
   }, [inView, controls])
 
@@ -18,7 +19,11 @@ const TestimonialCard = ({ quote, name, title, avatarColor }) => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+        delay: index * 0.3, // Delay based on index
+      },
     },
   }
 

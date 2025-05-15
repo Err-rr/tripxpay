@@ -1,7 +1,11 @@
+import franceimage from "./Images/france.png"
+import laimage from "./Images/losangelos.png"
+import morrocoimage from "./Images/morroco.png"
+
 const Hero = () => {
   return (
     <div className="relative w-full py-16 md:py-24 px-6 md:px-12 overflow-hidden">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center md:mb-20">
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           <span className="text-yellow-500">One Platform,</span> Everything You Need
           <br />
@@ -22,13 +26,14 @@ const Hero = () => {
       <div className="hidden md:block absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
         <div className="relative h-64">
           <div className="absolute left-20 bottom-10">
-            <img src="/placeholder.svg?height=80&width=100" alt="LA" className="w-20 h-16 object-contain" />
+            <img src={franceimage} alt="LA" className="w-36 h-32 object-contain" />
           </div>
           <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2">
-            <img src="/placeholder.svg?height=120&width=140" alt="Colosseum" className="w-32 h-28 object-contain" />
+            <img src={morrocoimage}alt="Colosseum" className="w-36 h-32 object-contain" />
           </div>
           <div className="absolute right-20 bottom-10">
-            <img src="/placeholder.svg?height=80&width=100" alt="Morocco" className="w-20 h-16 object-contain" />
+            <img src={laimage}
+            alt="Morocco" className="w-36 h-32 object-contain" />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { motion, useAnimation, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
-
+import cardimage from "./Images/card.jpeg"
 const CTASection = () => {
   const ref = useRef(null)
   const inView = useInView(ref, { threshold: 0.2 })
@@ -32,7 +32,7 @@ const CTASection = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 1, ease: "easeOut", delay: 0.2 },
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.5 },
     },
   }
 
@@ -41,7 +41,7 @@ const CTASection = () => {
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
-          className="bg-gradient-to-r from-teal-700 to-teal-600 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center"
+          className="bg-[#44b8acf6] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center"
         >
           <motion.div
             className="md:w-1/3 mb-6 md:mb-0"
@@ -49,11 +49,13 @@ const CTASection = () => {
             animate={imageControls}
             variants={imageVariants}
           >
-            <img
-              src="/placeholder.svg?height=200&width=200"
-              alt="Payment devices"
-              className="w-full max-w-xs mx-auto"
-            />
+            <div className="w-54 h-54 mx-auto rounded-full overflow-hidden">
+  <img
+    src={cardimage}
+    alt="Payment devices"
+    className="w-full h-full object-cover"
+  />
+</div>
           </motion.div>
 
           <motion.div

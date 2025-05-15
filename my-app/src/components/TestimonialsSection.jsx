@@ -26,9 +26,9 @@ const TestimonialsSection = () => {
   ]
 
   return (
-    <div className="w-full py-16 px-6 md:px-12 bg-gray-900">
+    <div className="w-full py-20 md:py-40 px-6 md:px-12 bg-gray-900">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">What Our Clients Say</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-2">What Our Clients Say</h2>
         <p className="text-gray-400 text-center mb-12">
           Don't just take our word for it — here's what travel agencies are saying about TripX Pay.
         </p>

@@ -35,9 +35,9 @@ const TestimonialCard = ({ quote, name, title, avatarColor, index }) => {
       variants={variants}
       className="flex flex-col h-full"
     >
-      <div className="bg-teal-600 rounded-lg p-6 flex-grow">
+      <div className="bg-teal-600 rounded-lg p-10 flex-grow">
         <div className="text-2xl text-white mb-2">"</div>
-        <p className="text-white text-sm">{quote}</p>
+        <p className="text-white text-md">{quote}</p>
       </div>
       <div className="flex items-center mt-4 px-4">
         <div

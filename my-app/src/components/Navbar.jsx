@@ -26,14 +26,14 @@ const Navbar = () => {
             <Link to="/about" className="text-sm font-medium text-gray-300 hover:text-white">
               ABOUT
             </Link>
-            <Link to="/pricing" className="text-sm font-medium text-gray-300 hover:text-white">
-              PRICING
+            <Link to="/blogs" className="text-sm font-medium text-gray-300 hover:text-white">
+              BLOGS
             </Link>
             <Link to="/help-support" className="text-sm font-medium text-gray-300 hover:text-white">
               HELP & SUPPORT
             </Link>
             <Link to="/merchant-login" className="text-sm font-medium text-gray-300 hover:text-white">
-              Merchant
+              MERCHANT
             </Link>
           </div>
         </div>
@@ -119,7 +119,7 @@ const Navbar = () => {
               onClick={toggleMenu}
               className="block text-sm font-medium text-gray-300 hover:text-white"
             >
-              Merchant
+              MERCHANT
             </Link>
             </div>
           </motion.div>

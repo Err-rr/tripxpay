@@ -180,7 +180,7 @@ const AboutPage = () => {
                 {
                   name: "Mukul Kaushik",
                   title: "Founder",
-                  bio: "Former travel agency owner with 15+ years in the industry.",
+                  bio: "Former travel agency owner with 3+ years in the industry.",
                 },
                 {
                   name: "Shivansh Pandey",

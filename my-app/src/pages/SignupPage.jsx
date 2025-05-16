@@ -12,6 +12,7 @@ const SignupPage = () => {
     lastName: "",
     email: "",
     password: "",
+    phoneNumber: "", // Added phone number field
     companyName: "",
     agreeTerms: false,
   })
@@ -91,6 +92,21 @@ const SignupPage = () => {
                 required
                 className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="Enter your email"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-300 mb-1">
+                Phone Number
+              </label>
+              <input
+                id="phoneNumber"
+                name="phoneNumber"
+                type="tel"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                placeholder="Enter your phone number"
               />
             </div>
 

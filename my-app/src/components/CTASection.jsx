@@ -1,6 +1,7 @@
 import { motion, useAnimation, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 import cardimage from "./Images/card.jpeg"
+import { Link } from "react-router-dom";
 const CTASection = () => {
   const ref = useRef(null)
   const inView = useInView(ref, { threshold: 0.2 })
@@ -75,10 +76,10 @@ const CTASection = () => {
               embracing flexible, risk-free payment solutions with
               <br />
               TripX Pay.
-            </p>
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-medium py-2 px-6 rounded-full">
+            </p><Link to="/signup" className="bg-yellow-500 hover:bg-yellow-600 text-black font-medium py-2 px-6 rounded-full">
+           
               START YOUR JOURNEY →
-            </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

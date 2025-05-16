@@ -1,7 +1,7 @@
 import franceimage from "./Images/france.png"
 import laimage from "./Images/losangelos.png"
 import morrocoimage from "./Images/morroco.png"
-
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div className="relative w-full py-16 md:py-24 px-6 md:px-12 overflow-hidden">
@@ -13,12 +13,15 @@ const Hero = () => {
         </h1>
         <p className="text-gray-400 mb-8">Flexible, secure, and built for the future of travel payments</p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-medium py-2 px-6 rounded-full">
+          <Link to="/signup" className="bg-yellow-500 hover:bg-yellow-600 text-black font-medium py-2 px-6 rounded-full">
+          
             GET STARTED
-          </button>
-          <button className="border border-gray-700 hover:border-gray-500 text-white font-medium py-2 px-6 rounded-full">
+       
+          </Link>
+          <Link to="about" className="border border-gray-700 hover:border-gray-500 text-white font-medium py-2 px-6 rounded-full">
+         
             KNOW ABOUT US
-          </button>
+          </Link>
         </div>
       </div>
 

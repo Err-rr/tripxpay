@@ -1,34 +1,43 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import TrustedSection from "./components/TrustedSection"
-import TestimonialsSection from "./components/TestimonialsSection"
-import CTASection from "./components/CTASection"
-import Footer from "./components/Footer"
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import HomePage from "./pages/HomePage"
+import LoginPage from "./pages/LoginPage"
+import SignupPage from "./pages/SignupPage"
+import AboutPage from "./pages/AboutPage"
+import PricingPage from "./pages/PricingPage"
+import HelpSupportPage from "./pages/HelpSupportPage"
+import BlogsPage from "./pages/BlogsPage"
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage"
+import CareersPage from "./pages/CareersPage"
+import ContactPage from "./pages/ContactPage"
+import HelpCenterPage from "./pages/HelpCenterPage"
+import CaseStudiesPage from "./pages/CaseStudiesPage"
+import DocumentationPage from "./pages/DocumentationPage"
+import TermsConditionsPage from "./pages/TermsConditionsPage"
+import MerchantLoginPage from "./pages/MerchantLoginPage"
+import ScrollToTop from "./components/ScrollToTop"
 function App() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white relative overflow-hidden">
-      {/* Top-left glow */}
-      <div className="absolute top-0 left-0 w-[500px] h-[300px] bg-gradient-to-br from-[#00ffb4]/40 to-transparent rotate-12 blur-[120px] rounded-[30%] pointer-events-none z-0" />
-{/* Top-right spread glow */}
-{/* Mid-left yellow glow */}
-
-{/* Bottom-right yellow glow */}
-<div className="absolute right-0 w-[550px] h-[300px] bg-gradient-to-tr from-yellow-400/30 to-transparent rotate-180 blur-[120px] rounded-[20%] pointer-events-none z-0 top-[33.5%]" />
-
-
-      {/* Bottom-right glow */}
-     
-      {/* Optional grid dots background */}
-      <div className="absolute inset-0 bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none z-0" />
-
-      <Navbar />
-      <Hero />
-      <TrustedSection />
-      <TestimonialsSection />
-      <CTASection />
-      <Footer />
-    </div>
+   <Router>
+     <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/help-support" element={<HelpSupportPage />} />
+        <Route path="/blogs" element={<BlogsPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/help-center" element={<HelpCenterPage />} />
+        <Route path="/case-studies" element={<CaseStudiesPage />} />
+        <Route path="/documentation" element={<DocumentationPage />} />
+        <Route path="/terms-conditions" element={<TermsConditionsPage />} />
+        <Route path="/merchant-login" element={<MerchantLoginPage />} />
+      </Routes>
+    </Router>
+    
   );
 }
 
